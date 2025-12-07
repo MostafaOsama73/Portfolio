@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,131 +8,196 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <meta
-    property="og:title"
-    content="Mostafa's Portfolio"
-  />
-  <meta
-    property="og:description"
-    content="Welcome to Mostafa Osama's portfolio website. Explore my projects, skills, and get in touch!"
-  />
-  <meta
-    property="og:image"
-    content="assets/image.png"
-  />  
-  <meta
-    property="og:type"
-    content="website"
-  />
+  <meta property="og:title" content="Mostafa's Portfolio" />
+  <meta property="og:description"
+    content="Welcome to Mostafa Osama's portfolio website. Explore my projects, skills, and get in touch!" />
+  <meta property="og:image" content="assets/image.png" />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/x-icon" href="assets/image.png">
 
-  
+
 </head>
+
 <body>
 
   <!-- Loading Screen -->
   <div id="loading-screen">
-    <pre id="terminal-text"></pre>
-  </div>
-
-  <!-- Matrix Canvas -->
-  <canvas id="matrix-canvas"></canvas>
-
-  <!-- Header -->
-  <header class="fade-in">
-    <h1>👾 Mostafa Osama</h1>
-    <p id="typed-text"></p>
-  </header>
-
-  <!-- About Me -->
-  <section class="about fade-in">
-    <h2>About Me</h2>
-    <p>I’m a passionate back-end developer with a strong background in C#, .NET, and AI. I love solving real-world problems and building clean, scalable solutions.</p>
-    <a href="assets/Mostafa's Resume1.pdf" download class="resume-btn">Download Resume</a>  
-  </section>
-
-  <!-- Skills -->
-  <section class="skills fade-in">
-    <h2>🛠 Skills</h2>
-    <div class="columns">
-      <div>
-        <h3>Languages</h3>
-        <ul>
-          <li>C#</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Frameworks</h3>
-        <ul>
-          <li>.NET</li>
-          <li>Spring Boot</li>
-          <li>Flask</li>
-          <li>FastAPI</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Databases</h3>
-        <ul>
-          <li>MySQL</li>
-          <li>SQL</li>
-          <li>MongoDB</li>
-        </ul>
+    <div class="loader-content">
+      <pre id="terminal-text"></pre>
+      <div class="progress-bar">
+        <div class="progress"></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Projects -->
-  <section class="projects fade-in">
-    <h2>🚀 Projects</h2>
-    <ul>
-      <li>
-        <strong>EduFlow Academy</strong> – Education web platform |
-        <a href="https://github.com/MostafaOsama73/EduFlowAcademy.git" target="_blank">GitHub</a>
-      </li>
-      <li>
-        <strong>E-commerce App</strong> – Java Spring Boot based |
-        <a href="https://github.com/MostafaOsama73/ecommerce.git" target="_blank">GitHub</a>
-      </li> 
-      <li>
-        <strong>Driver Drowsiness Detection</strong> - AI project |
-        <a href="https://github.com/MostafaOsama73/DDD-Model.git" target="_blank"> GitHub</a>
-      </li>
-      <li>
-        <strong>Age Calculator application</strong>  |
-        <a href="https://github.com/MostafaOsama73/codealpha.git" target="_blank"> GitHub</a>
-      </li>
+  <!-- Matrix Canvas Background -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar fade-in">
+    <div class="logo">MO</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <!-- Mini Game
-  <section id="mini-game" class="fade-in">
-    <h2>🎮 Snake Game</h2>
-    <canvas id="snake-game" width="400" height="400"></canvas>
-  </section> -->
+  <main class="container">
+    <!-- Header / Hero -->
+    <header class="hero fade-in">
+      <div class="glitch-wrapper">
+        <h1 class="glitch" data-text="Mostafa Osama">Mostafa Osama</h1>
+      </div>
+      <p id="typed-text" class="subtitle"></p>
+      <div class="scroll-indicator">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
 
-  <!-- Contact -->
-  <section class="contact fade-in">
-    <h2>📬 Contact Me</h2>
-    <form action="https://formspree.io/f/meozlyyo" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <textarea name="message" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <!-- About Me -->
+    <section id="about" class="about glass-panel fade-in-scroll">
+      <h2 class="section-title">01. <span class="highlight">About Me</span></h2>
+      <div class="about-content">
+        <p>I’m a passionate <span class="highlight">Back-end Developer</span> with a strong background in <span
+            class="highlight">C#</span>, <span class="highlight">.NET</span>, and <span class="highlight">AI</span>. I
+          love solving real-world problems and building clean, scalable solutions that live on the edge of technology.
+        </p>
+        <a href="assets/Mostafa's Resume1.pdf" download class="btn neon-btn">
+          <span>Download Resume</span>
+          <div class="liquid"></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills glass-panel fade-in-scroll">
+      <h2 class="section-title">02. <span class="highlight">Skills</span></h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <ul class="skill-list">
+            <li>C#</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+          <ul class="skill-list">
+            <li>.NET Core</li>
+            <li>Spring Boot</li>
+            <li>Flask</li>
+            <li>FastAPI</li>
+            <li>Entity Framework</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Databases</h3>
+          <ul class="skill-list">
+            <li>MySQL</li>
+            <li>SQL Server</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects glass-panel fade-in-scroll">
+      <h2 class="section-title">03. <span class="highlight">Projects</span></h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3>EduFlow Academy</h3>
+            <p>A comprehensive education web platform facilitating seamless learning experiences.</p>
+            <div class="tech-stack">
+              <span>C#</span><span>.NET</span><span>SQL</span>
+            </div>
+            <a href="https://github.com/MostafaOsama73/EduFlowAcademy.git" target="_blank" class="project-link">View
+              Code <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3>E-commerce App</h3>
+            <p>Robust e-commerce backend built with Java Spring Boot, featuring secure payment processing.</p>
+            <div class="tech-stack">
+              <span>Java</span><span>Spring Boot</span><span>MySQL</span>
+            </div>
+            <a href="https://github.com/MostafaOsama73/ecommerce.git" target="_blank" class="project-link">View Code <i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Driver Drowsiness Detection</h3>
+            <p>AI-powered system using computer vision to detect driver fatigue and prevent accidents.</p>
+            <div class="tech-stack">
+              <span>Python</span><span>OpenCV</span><span>TensorFlow</span>
+            </div>
+            <a href="https://github.com/MostafaOsama73/DDD-Model.git" target="_blank" class="project-link">View Code <i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Age Calculator</h3>
+            <p>A simple yet elegant utility application for precise age calculation.</p>
+            <div class="tech-stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <a href="https://github.com/MostafaOsama73/codealpha.git" target="_blank" class="project-link">View Code <i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact glass-panel fade-in-scroll">
+      <h2 class="section-title">04. <span class="highlight">Contact Me</span></h2>
+      <p class="contact-text">Have a question or want to work together? Leave me a message!</p>
+      <form action="https://formspree.io/f/meozlyyo" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" required />
+          <label>Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" required />
+          <label>Your Email</label>
+        </div>
+        <div class="form-group">
+          <textarea name="message" required></textarea>
+          <label>Your Message</label>
+        </div>
+        <button type="submit" class="btn neon-btn">
+          <span>Send Message</span>
+          <div class="liquid"></div>
+        </button>
+      </form>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="fade-in">
+  <footer>
     <p>© 2025 Mostafa Osama</p>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/mostafa-osama-4b58b627b/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/MostafaOsama73" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/mostafa-osama-4b58b627b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/MostafaOsama73" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </footer>
 
+  <!-- FontAwesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
